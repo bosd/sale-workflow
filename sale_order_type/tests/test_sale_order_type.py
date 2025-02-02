@@ -6,9 +6,10 @@ from freezegun import freeze_time
 
 import odoo.tests.common as common
 from odoo import fields
-from odoo.tests import Form
+from odoo.tests import Form, tagged
 
 
+@tagged("post_install", "-at_install")
 class TestSaleOrderType(common.TransactionCase):
     def setUp(self):
         super().setUp()
