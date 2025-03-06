@@ -26,7 +26,7 @@ class TestProductAssortment(BaseCommon):
             {
                 "name": "Test Assortment 1",
                 "model_id": "product.product",
-                "domain": [],
+                "domain": [("id", "=", 0)],
                 "is_assortment": True,
                 "partner_ids": [(4, self.partner_1.id)],
                 "whitelist_product_ids": [(4, product_1.id)],
@@ -43,7 +43,7 @@ class TestProductAssortment(BaseCommon):
             {
                 "name": "Test Assortment 2",
                 "model_id": "product.product",
-                "domain": [],
+                "domain": [("id", "=", 0)],
                 "is_assortment": True,
                 "partner_ids": [(4, self.partner_1.id)],
                 "blacklist_product_ids": [(4, product_2.id)],
