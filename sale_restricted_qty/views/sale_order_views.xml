@@ -11,7 +11,7 @@
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
             <xpath
-                expr="//field[@name='order_line']/form//field[@name='price_unit']"
+                expr="//page/field[@name='order_line']/form//field[@name='price_unit']"
                 position="after"
             >
                 <field name="restrict_min_qty" invisible="1" />
@@ -25,7 +25,7 @@
             </xpath>
 
             <xpath
-                expr="//field[@name='order_line']/form//field[@name='product_uom_qty']"
+                expr="//page/field[@name='order_line']/form//field[@name='product_uom_qty']"
                 position="attributes"
             >
                 <attribute
@@ -61,7 +61,7 @@
             </xpath>
 
             <xpath
-                expr="//field[@name='order_line']/tree/field[@name='product_uom_qty']"
+                expr="//page/field[@name='order_line']/list/field[@name='product_uom_qty']"
                 position="after"
             >
                 <field name="min_qty" optional="hide" />
@@ -75,7 +75,7 @@
                 <field name="is_not_multiple_of_qty" column_invisible="1" />
             </xpath>
 
-            <xpath expr="//field[@name='order_line']/tree" position="attributes">
+            <xpath expr="//page/field[@name='order_line']/list" position="attributes">
                 <attribute
                     name="decoration-danger"
                     add="(restrict_min_qty and is_below_min_qty)"
