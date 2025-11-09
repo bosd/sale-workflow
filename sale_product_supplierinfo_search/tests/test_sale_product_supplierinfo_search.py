@@ -104,5 +104,8 @@ class TestSaleProductSupplierinfoSearch(TransactionCase):
 
         # The product found by its default_code should be first.
         product_ids_in_order = [p[0] for p in products]
-        self.assertEqual(product_ids_in_order, [self.product_test_b.id, self.product_test_a.id],
-                         "The standard search result should appear before the supplier info result.")
+        self.assertEqual(
+            product_ids_in_order,
+            [self.product_test_b.id, self.product_test_a.id],
+            "The standard search result should appear before the supplier info result.",
+        )
