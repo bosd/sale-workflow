@@ -14,7 +14,7 @@ class TestSaleProductSupplierinfoSearch(TransactionCase):
             {
                 "name": "Test Product A",
                 "default_code": "TEST-A",
-                "type": "product",
+                "detailed_type": "product",
             }
         )
         self.supplier = self.Supplier.create({"name": "Test Supplier"})
@@ -31,8 +31,8 @@ class TestSaleProductSupplierinfoSearch(TransactionCase):
         self.product_test_b = self.ProductProduct.create(
             {
                 "name": "Test Product B",
-                "default_code": "TEST-B-NAME", # Name also matches a search for 'TEST-B'
-                "type": "product",
+                "default_code": "TEST-B-NAME",
+                "detailed_type": "product",
             }
         )
         self.supplier_info_b = self.SupplierInfo.create(
